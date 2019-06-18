@@ -1,0 +1,15 @@
+<% if current_user %>
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>Name:</strong>
+  <%= @file.name %>
+</p>
+<p>
+  <strong>Download:</strong>
+  <%= link_to "download", download_pdf_path %>
+</p>
+<%= link_to 'Edit', edit_upload_path(@file) %> |
+<%= link_to 'Back', uploads_path %>
+<% else %>
+  <p> Invalid User </p>
+<% end %>
